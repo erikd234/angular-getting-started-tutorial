@@ -1,11 +1,11 @@
 <h1>Checkout Items:</h1>
 
-<ul>
-  <li class='cart-item' *ngFor="let product of cartItems">
-    {{product.name}}
-    {{product.price | currency}}
-  </li>
-</ul>
+
+<div class='cart-item' *ngFor="let product of cartItems">
+  <span> {{product.name}}</span>
+  <span>{{product.price | currency}}</span>
+</div>
+
 <div style="padding-bottom: 10px;">
   <a [routerLink]="['../shipping']">Shipping Prices</a>
 </div>
