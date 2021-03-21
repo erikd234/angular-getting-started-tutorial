@@ -1,0 +1,12 @@
+<h1>Checkout Items:</h1>
+
+<ul>
+  <li class='cart-item' *ngFor="let product of cartItems">
+    {{product.name}}
+    {{product.price | currency}}
+  </li>
+</ul>
+<div style="padding-bottom: 10px;">
+  <a [routerLink]="'shipping'">Shipping Prices</a>
+</div>
+<button  (click)='clearCart()'>Clear Cart</button>
